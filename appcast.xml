@@ -3,6 +3,40 @@
     <channel>
         <title>Silcrate</title>
         <item>
+            <title>0.1.9</title>
+            <pubDate>Sun, 19 Jul 2026 01:36:50 +0300</pubDate>
+            <link>https://github.com/keenhatch/silcrate</link>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body { font: 13px -apple-system, sans-serif; color: #1d1d1f; background: #ffffff; margin: 16px; }
+h2 { font-size: 15px; margin: 14px 0 6px; }
+ul { padding-left: 20px; margin: 6px 0; }
+li { margin: 3px 0; }
+a { color: #0071e3; }
+@media (prefers-color-scheme: dark) {
+    body { color: #f5f5f7; background: #1e1e1e; }
+    a { color: #2997ff; }
+}
+</style>
+</head>
+<body>
+<div class="markdown-heading"><h2 class="heading-element">Fixes</h2><a id="user-content-fixes" class="anchor" aria-label="Permalink: Fixes" href="#fixes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>
+<strong>Creating a machine no longer resizes the window.</strong> When the build output appeared, the Silcrate window would jump to a new size — sometimes wider than your screen. It now stays exactly where you left it.</li>
+</ul>
+</body>
+</html>]]></description>
+            <enclosure url="https://github.com/keenhatch/silcrate/releases/download/v0.1.9/Silcrate-0.1.9.dmg" length="22057813" type="application/octet-stream" sparkle:edSignature="3+GBc5UhWxua1uIwJmNyFViWCKyR7IFyvyOwqdsjEzX+f90/Z3bfNIG7THFcc7S3mn9g/1gZJHiBcxjdgTeODg=="/>
+        </item>
+        <item>
             <title>0.1.8</title>
             <pubDate>Sat, 18 Jul 2026 21:30:49 +0300</pubDate>
             <link>https://github.com/keenhatch/silcrate</link>
