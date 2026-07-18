@@ -3,11 +3,11 @@
     <channel>
         <title>Silcrate</title>
         <item>
-            <title>0.1.7</title>
-            <pubDate>Sat, 18 Jul 2026 17:48:56 +0300</pubDate>
+            <title>0.1.8</title>
+            <pubDate>Sat, 18 Jul 2026 21:30:49 +0300</pubDate>
             <link>https://github.com/keenhatch/silcrate</link>
-            <sparkle:version>7</sparkle:version>
-            <sparkle:shortVersionString>0.1.7</sparkle:shortVersionString>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description><![CDATA[<!DOCTYPE html>
@@ -27,21 +27,20 @@ a { color: #0071e3; }
 </style>
 </head>
 <body>
-<p>Silcrate is a native macOS app for Apple's <code>container</code> CLI. It gives you a fast, native interface for running and managing Linux containers on Apple silicon — no terminal required — with everything the underlying tooling exposes surfaced through a clean SwiftUI interface.</p>
-<h2>Highlights</h2>
+<div class="markdown-heading"><h2 class="heading-element">What's New</h2><a id="user-content-whats-new" class="anchor" aria-label="Permalink: What's New" href="#whats-new"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <ul>
-<li><strong>Containers</strong> — Create, start, stop, and delete containers, browse them in a live list, inspect their configuration and logs, and open a shell into any running container.</li>
-<li><strong>Machines</strong> — Manage the <code>container</code> system service and its virtual machines: start and stop the runtime, and control the environment your containers run in.</li>
-<li><strong>Images</strong> — Pull, tag, and remove images, browse your local image store, and inspect layers, digests, and metadata.</li>
-<li><strong>Volumes</strong> — Create and delete volumes and see what's mounted where, so persistent data is easy to manage.</li>
-<li><strong>Networks</strong> — View and manage container networks and inspect how your containers are connected.</li>
-<li><strong>Builds</strong> — Build images from a Dockerfile directly in the app and follow build output as it streams.</li>
-<li><strong>Live stats</strong> — Watch CPU, memory, and resource usage for running containers in real time.</li>
-<li><strong>In-app updates</strong> — Silcrate keeps itself current with built-in updates, so new releases install with a single click.</li>
+<li>
+<strong>Rosetta is handled honestly now.</strong> Silcrate tells the difference between a Mac that can run Intel software, one that needs Rosetta installed, and one that can never do it. Where a choice depends on Rosetta, the option is marked and explained instead of quietly greyed out, with a link straight to Settings. You can install Rosetta from Settings or during setup — Apple's own license sheet handles the agreement.</li>
+<li>
+<strong>Non-native architectures no longer let you build a container that can't start.</strong> Creating a container, building an image, or making a machine will refuse an architecture your Mac can't translate, rather than failing later when the virtual machine won't come up.</li>
+<li>
+<strong>Bad memory values are caught before the download, not after.</strong> Type an invalid memory or shared-memory size in the create form and Silcrate tells you immediately — no more waiting through a full image pull to find out.</li>
+<li>
+<strong>Published ports are checked as you type.</strong> Each port row is validated against what the container engine actually accepts, and Create stays disabled until they're right, with the reason shown on the offending row.</li>
 </ul>
 </body>
 </html>]]></description>
-            <enclosure url="https://github.com/keenhatch/silcrate/releases/download/v0.1.7/Silcrate-0.1.7.dmg" length="22006867" type="application/octet-stream" sparkle:edSignature="4f3sKxHQVY0om3YmNgZHA9yQDTfDhVQChpUQlBpbtLGOItNYbJhHcsNwpSuv/UcUUVc3XBAZx+lbGx6+vDozDg=="/>
+            <enclosure url="https://github.com/keenhatch/silcrate/releases/download/v0.1.8/Silcrate-0.1.8.dmg" length="22058593" type="application/octet-stream" sparkle:edSignature="z293aFTWDMjqh8ek1pnlTFiGcpBsAhe+FsvijDyo2+MA94n/K1zZ8tAUb+8diSpbdL3WqDtXDL2slfzHIjlpDg=="/>
         </item>
     </channel>
 </rss>
