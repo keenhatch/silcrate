@@ -3,45 +3,11 @@
     <channel>
         <title>Silcrate</title>
         <item>
-            <title>0.1.9</title>
-            <pubDate>Sun, 19 Jul 2026 01:36:50 +0300</pubDate>
+            <title>0.1.10</title>
+            <pubDate>Sun, 19 Jul 2026 17:35:32 +0300</pubDate>
             <link>https://github.com/keenhatch/silcrate</link>
-            <sparkle:version>9</sparkle:version>
-            <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<style>
-body { font: 13px -apple-system, sans-serif; color: #1d1d1f; background: #ffffff; margin: 16px; }
-h2 { font-size: 15px; margin: 14px 0 6px; }
-ul { padding-left: 20px; margin: 6px 0; }
-li { margin: 3px 0; }
-a { color: #0071e3; }
-@media (prefers-color-scheme: dark) {
-    body { color: #f5f5f7; background: #1e1e1e; }
-    a { color: #2997ff; }
-}
-</style>
-</head>
-<body>
-<div class="markdown-heading"><h2 class="heading-element">Fixes</h2><a id="user-content-fixes" class="anchor" aria-label="Permalink: Fixes" href="#fixes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
-<ul>
-<li>
-<strong>Creating a machine no longer resizes the window.</strong> When the build output appeared, the Silcrate window would jump to a new size — sometimes wider than your screen. It now stays exactly where you left it.</li>
-</ul>
-</body>
-</html>]]></description>
-            <enclosure url="https://github.com/keenhatch/silcrate/releases/download/v0.1.9/Silcrate-0.1.9.dmg" length="22057813" type="application/octet-stream" sparkle:edSignature="3+GBc5UhWxua1uIwJmNyFViWCKyR7IFyvyOwqdsjEzX+f90/Z3bfNIG7THFcc7S3mn9g/1gZJHiBcxjdgTeODg=="/>
-        </item>
-        <item>
-            <title>0.1.8</title>
-            <pubDate>Sat, 18 Jul 2026 21:30:49 +0300</pubDate>
-            <link>https://github.com/keenhatch/silcrate</link>
-            <sparkle:version>8</sparkle:version>
-            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+            <sparkle:version>10</sparkle:version>
+            <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description><![CDATA[<!DOCTYPE html>
@@ -64,17 +30,43 @@ a { color: #0071e3; }
 <div class="markdown-heading"><h2 class="heading-element">What's New</h2><a id="user-content-whats-new" class="anchor" aria-label="Permalink: What's New" href="#whats-new"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <ul>
 <li>
-<strong>Rosetta is handled honestly now.</strong> Silcrate tells the difference between a Mac that can run Intel software, one that needs Rosetta installed, and one that can never do it. Where a choice depends on Rosetta, the option is marked and explained instead of quietly greyed out, with a link straight to Settings. You can install Rosetta from Settings or during setup — Apple's own license sheet handles the agreement.</li>
+<p><strong>Compose stacks.</strong> A new Compose section lists your stacks — running, partly up, or stopped, with drift and orphans flagged per row. Open one for its services, its network and volumes, the compose file read-only with unsupported lines struck through, and every service's logs interleaved into one timeline.</p>
+</li>
 <li>
-<strong>Non-native architectures no longer let you build a container that can't start.</strong> Creating a container, building an image, or making a machine will refuse an architecture your Mac can't translate, rather than failing later when the virtual machine won't come up.</li>
+<p><strong>Delete confirmations tell you what they will do.</strong> What goes, what survives, how much space comes back, what breaks. Irreversible deletes gate on a typed phrase — selectable, with a Copy button. Same dialog everywhere: containers, machines, images, volumes, networks, stacks.</p>
+</li>
 <li>
-<strong>Bad memory values are caught before the download, not after.</strong> Type an invalid memory or shared-memory size in the create form and Silcrate tells you immediately — no more waiting through a full image pull to find out.</li>
+<p><strong>A deletion takes what it can.</strong> Select twelve, the eight that are free are deleted and the three still in use are named and skipped, instead of the whole action refusing.</p>
+</li>
 <li>
-<strong>Published ports are checked as you type.</strong> Each port row is validated against what the container engine actually accepts, and Create stays disabled until they're right, with the reason shown on the offending row.</li>
+<p><strong>Long errors stay until read.</strong> They stick as a toast with a close button; auto-dismiss pauses while you hover or leave the window. Repeats collapse into one with a count.</p>
+</li>
+<li>
+<p><strong>CPU and memory are picked with steppers</strong>, bounded by what your Mac can give. Free-text size fields gone. Create forms open on your configured defaults instead of hardcoded numbers.</p>
+</li>
+<li>
+<p><strong>The log console is selectable.</strong> Drag, Select All, Copy, Find. Holds 10,000 lines, won't trim while you're scrolled up.</p>
+</li>
+<li>
+<p><strong>Search sits above the list it filters</strong>, not in the titlebar.</p>
+</li>
+<li>
+<p><strong>Cancel a running build</strong> — or a stack launch, keeping what it already created.</p>
+</li>
+</ul>
+<div class="markdown-heading"><h2 class="heading-element">Fixes</h2><a id="user-content-fixes" class="anchor" aria-label="Permalink: Fixes" href="#fixes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>Confirming a stack delete now actually deletes the stack.</li>
+<li>Failed commands say why they failed.</li>
+<li>A failed service start no longer reports success.</li>
+<li>Image names with a registry port parse correctly; untagged images show <code>&lt;none&gt;</code>.</li>
+<li>Names are checked against the rule the engine will apply.</li>
+<li>Sizes read the same on every screen.</li>
+<li>Update preferences stick across launches.</li>
 </ul>
 </body>
 </html>]]></description>
-            <enclosure url="https://github.com/keenhatch/silcrate/releases/download/v0.1.8/Silcrate-0.1.8.dmg" length="22058593" type="application/octet-stream" sparkle:edSignature="z293aFTWDMjqh8ek1pnlTFiGcpBsAhe+FsvijDyo2+MA94n/K1zZ8tAUb+8diSpbdL3WqDtXDL2slfzHIjlpDg=="/>
+            <enclosure url="https://github.com/keenhatch/silcrate/releases/download/v0.1.10/Silcrate-0.1.10.dmg" length="22997469" type="application/octet-stream" sparkle:edSignature="VkopJf+B2dDc0cbBv/L9eO3Arpjzjx7VWKGLggzwQtBX3il3xvomMPmc7kslcEF3QCzuDyeoJt5qKa4R6ocEBQ=="/>
         </item>
     </channel>
 </rss>
