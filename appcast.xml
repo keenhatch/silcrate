@@ -3,11 +3,11 @@
     <channel>
         <title>Silcrate</title>
         <item>
-            <title>0.1.10</title>
-            <pubDate>Sun, 19 Jul 2026 17:35:32 +0300</pubDate>
+            <title>0.1.11</title>
+            <pubDate>Mon, 20 Jul 2026 12:03:13 +0300</pubDate>
             <link>https://github.com/keenhatch/silcrate</link>
-            <sparkle:version>10</sparkle:version>
-            <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
+            <sparkle:version>11</sparkle:version>
+            <sparkle:shortVersionString>0.1.11</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description><![CDATA[<!DOCTYPE html>
@@ -30,43 +30,39 @@ a { color: #0071e3; }
 <div class="markdown-heading"><h2 class="heading-element">What's New</h2><a id="user-content-whats-new" class="anchor" aria-label="Permalink: What's New" href="#whats-new"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <ul>
 <li>
-<p><strong>Compose stacks.</strong> A new Compose section lists your stacks — running, partly up, or stopped, with drift and orphans flagged per row. Open one for its services, its network and volumes, the compose file read-only with unsupported lines struck through, and every service's logs interleaved into one timeline.</p>
+<p><strong>Silcrate shows what every item is doing.</strong> Start, stop, or restart a container, machine, image, volume, or network and the row now spins and names the action in place of its status — a restarting machine reads as restarting instead of flashing a blank "Stopped" that looked like a failure. Run an action across a whole selection and the selection summary counts the progress down, instead of going quiet until the final result.</p>
 </li>
 <li>
-<p><strong>Delete confirmations tell you what they will do.</strong> What goes, what survives, how much space comes back, what breaks. Irreversible deletes gate on a typed phrase — selectable, with a Copy button. Same dialog everywhere: containers, machines, images, volumes, networks, stacks.</p>
-</li>
-<li>
-<p><strong>A deletion takes what it can.</strong> Select twelve, the eight that are free are deleted and the three still in use are named and skipped, instead of the whole action refusing.</p>
-</li>
-<li>
-<p><strong>Long errors stay until read.</strong> They stick as a toast with a close button; auto-dismiss pauses while you hover or leave the window. Repeats collapse into one with a count.</p>
-</li>
-<li>
-<p><strong>CPU and memory are picked with steppers</strong>, bounded by what your Mac can give. Free-text size fields gone. Create forms open on your configured defaults instead of hardcoded numbers.</p>
-</li>
-<li>
-<p><strong>The log console is selectable.</strong> Drag, Select All, Copy, Find. Holds 10,000 lines, won't trim while you're scrolled up.</p>
-</li>
-<li>
-<p><strong>Search sits above the list it filters</strong>, not in the titlebar.</p>
-</li>
-<li>
-<p><strong>Cancel a running build</strong> — or a stack launch, keeping what it already created.</p>
+<p><strong>The menu bar reports failures instead of swallowing them.</strong> Starting or stopping something from the menu bar popover used to fail silently. Now the row spins while it works, a failed action shows a card with the reason and Retry / Dismiss, and a row that's already working won't fire the same command a second time.</p>
 </li>
 </ul>
 <div class="markdown-heading"><h2 class="heading-element">Fixes</h2><a id="user-content-fixes" class="anchor" aria-label="Permalink: Fixes" href="#fixes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <ul>
-<li>Confirming a stack delete now actually deletes the stack.</li>
-<li>Failed commands say why they failed.</li>
-<li>A failed service start no longer reports success.</li>
-<li>Image names with a registry port parse correctly; untagged images show <code>&lt;none&gt;</code>.</li>
-<li>Names are checked against the rule the engine will apply.</li>
-<li>Sizes read the same on every screen.</li>
-<li>Update preferences stick across launches.</li>
+<li>
+<p><strong>Stopping the engine service now looks like it's stopping.</strong> The sidebar, dashboard, and menu bar kept reading "Running" with a live Stop button through the entire shutdown. They now show a stopping state and wait for the service to actually stop before calling it done.</p>
+</li>
+<li>
+<p><strong>CPU usage stays believable.</strong> The dashboard and menu bar now measure CPU against the number of cores your Mac has, so it no longer climbs past 100%. The same container also reads the same percentage everywhere — no more 45.3% in one place and 45% in another — and percentages now follow your region's number format.</p>
+</li>
+<li>
+<p><strong>Settings comes to the front.</strong> Opening Settings from the menu bar popover now brings its window forward, instead of leaving it behind whatever you were working in.</p>
+</li>
+<li>
+<p><strong>Rows stop jumping.</strong> A container or machine row no longer shifts its title sideways the moment a command starts and back when it finishes.</p>
+</li>
+<li>
+<p><strong>A machine's mounts are colored like a container's.</strong> A bind mount into your Mac's own storage now stands out on the machine screen the same way it does on the container screen, instead of blending in.</p>
+</li>
+<li>
+<p><strong>Resetting a running build warns you first.</strong> The reset confirmation now tells you it will stop the build before resetting, when the build is up.</p>
+</li>
+<li>
+<p><strong>The menu bar item stays on after setup.</strong> Finishing first-run setup no longer left the menu bar item switched off.</p>
+</li>
 </ul>
 </body>
 </html>]]></description>
-            <enclosure url="https://github.com/keenhatch/silcrate/releases/download/v0.1.10/Silcrate-0.1.10.dmg" length="22997469" type="application/octet-stream" sparkle:edSignature="VkopJf+B2dDc0cbBv/L9eO3Arpjzjx7VWKGLggzwQtBX3il3xvomMPmc7kslcEF3QCzuDyeoJt5qKa4R6ocEBQ=="/>
+            <enclosure url="https://github.com/keenhatch/silcrate/releases/download/v0.1.11/Silcrate-0.1.11.dmg" length="23047090" type="application/octet-stream" sparkle:edSignature="HvcXxSN++lPUtoqEIMIbm8Hx5JQAmMIs5da0cFzLfqEVqQm/jyeeCBqMIXzQmBEKhmYlFCmPUcWPqTiYfhcFCA=="/>
         </item>
     </channel>
 </rss>
